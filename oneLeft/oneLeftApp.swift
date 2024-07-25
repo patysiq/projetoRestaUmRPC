@@ -10,11 +10,21 @@ import SwiftUI
 @main
 struct oneLeftApp: App {
     let persistenceController = PersistenceController.shared
+    @AppStorage("yourName") var yourName = ""
+    @StateObject var game = GameService()
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            if yourName.isEmpty {
+                YourNameView()
+            } else {
+                StartView(yourName: yourName)
+                    .environmentObject(game)
+            }
+//            ContentView()
+//                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }
+
+
