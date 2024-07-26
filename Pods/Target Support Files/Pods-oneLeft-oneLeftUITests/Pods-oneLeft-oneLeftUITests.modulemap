@@ -1,0 +1,6 @@
+framework module Pods_oneLeft_oneLeftUITests {
+  umbrella header "Pods-oneLeft-oneLeftUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

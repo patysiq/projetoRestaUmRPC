@@ -36,7 +36,7 @@ struct ChatView: View {
                                     scrollView.scrollTo(last.id)
                                 }
                             }else{
-                                print("nilllllyo")
+                                print("perdeu conexão")
                             }
                         }
                     }
